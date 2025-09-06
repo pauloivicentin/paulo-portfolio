@@ -11,7 +11,6 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/preview.png" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
-  <link rel="preload" href="projects.json" as="fetch" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -29,92 +28,137 @@
   </nav>
 </header>
 
-<main>
-  <!-- Hero -->
-  <section class="hero section" id="home" aria-labelledby="hero-title">
-    <div class="hero-content">
-      <h1 id="hero-title">Olá, eu sou o <span class="gradient">Paulo Iacono Vicentin</span> 👋</h1>
-      <p class="hero-sub">
-        Analista de Dados / BI — Maringá‑PR. SQL, Python e Power BI para transformar dados em decisões.
-      </p>
-      <div class="hero-cta">
-        <a class="btn" href="#projetos">Ver projetos</a>
-        <a class="btn alt" href="assets/cv-paulo.pdf" download>Baixar CV</a>
-      </div>
-      <div class="quick-stats">
-        <div><strong>200+</strong><span>projetos técnicos</span></div>
-        <div><strong>5+</strong><span>anos em engenharia</span></div>
-        <div><strong>SQL • Python • Power BI</strong><span>stack principal</span></div>
+<!-- LAYOUT COM SIDEBAR -->
+<div class="layout">
+  <!-- Lado esquerdo -->
+  <aside class="sidebar">
+    <div class="card side-card">
+      <img class="avatar" src="assets/foto.jpg" alt="Foto de Paulo Iacono Vicentin" />
+      <h1 class="name">Paulo Iacono Vicentin</h1>
+      <p class="role">Analista de Dados / BI — Maringá-PR</p>
+      <div class="side-contacts">
+        <a href="mailto:contato@paulovicentin.com">contato@paulovicentin.com</a>
+        <a href="https://www.linkedin.com/in/paulovicentin" target="_blank" rel="noopener">linkedin.com/in/paulovicentin</a>
+        <a href="https://github.com/paulovicentin" target="_blank" rel="noopener">github.com/paulovicentin</a>
+        <a href="assets/cv-paulo.pdf" download>Baixar CV (PDF)</a>
       </div>
     </div>
-  </section>
 
-  <!-- Projetos -->
-  <section class="section" id="projetos" aria-labelledby="proj-title">
-    <div class="section-head">
-      <h2 id="proj-title">Projetos</h2>
-      <div class="controls">
-        <input id="search" type="search" placeholder="Buscar por título, tag ou tecnologia…" aria-label="Buscar projetos" />
-        <div class="chips" id="tagChips" role="listbox" aria-label="Filtrar por tag"></div>
-        <select id="sortSelect" aria-label="Ordenar">
-          <option value="featured">Destaques primeiro</option>
-          <option value="recent">Mais recentes</option>
-          <option value="az">A → Z</option>
-        </select>
-      </div>
-    </div>
-    <div id="grid" class="grid" aria-live="polite"></div>
-    <div id="emptyState" class="empty" hidden>Nenhum projeto encontrado. Tente ajustar os filtros.</div>
-  </section>
-
-  <!-- Sobre -->
-  <section class="section" id="sobre" aria-labelledby="sobre-title">
-    <h2 id="sobre-title">Sobre</h2>
-    <div class="about">
-      <p>Sou engenheiro civil em transição para Dados, com experiência em gestão, processos e operação. 
-      Meu foco é usar <strong>SQL, Python e Power BI</strong> para responder perguntas de negócio, criar dashboards claros e automatizar rotinas. 
-      Curto explicações diretas e soluções práticas.</p>
-      <ul class="bullets">
-        <li>Experiência em <strong>modelagem de dados</strong>, ETL leve e visualização.</li>
-        <li>Projetos aplicados: churn, vendas, risco, CRM/ERP, e dados públicos (IBGE/BCB).</li>
-        <li>Trabalho orientado a impacto: problema → hipótese → métrica → entrega.</li>
+    <div class="card side-card">
+      <h2 class="side-title">Hard skills</h2>
+      <ul class="skill-list">
+        <!-- Edite os níveis (width) e os rótulos -->
+        <li class="skill">
+          <div class="label">SQL <span>Avançado</span></div>
+          <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85">
+            <i style="width:85%"></i>
+          </div>
+        </li>
+        <li class="skill">
+          <div class="label">Python (pandas) <span>Intermediário+</span></div>
+          <div class="progress" aria-valuenow="75"><i style="width:75%"></i></div>
+        </li>
+        <li class="skill">
+          <div class="label">Power BI (DAX) <span>Intermediário</span></div>
+          <div class="progress" aria-valuenow="70"><i style="width:70%"></i></div>
+        </li>
+        <li class="skill">
+          <div class="label">Excel Avançado <span>Avançado</span></div>
+          <div class="progress" aria-valuenow="80"><i style="width:80%"></i></div>
+        </li>
+        <li class="skill">
+          <div class="label">Modelagem de Dados <span>Intermediário</span></div>
+          <div class="progress" aria-valuenow="65"><i style="width:65%"></i></div>
+        </li>
       </ul>
     </div>
-  </section>
+  </aside>
 
-  <!-- Habilidades -->
-  <section class="section" id="habilidades" aria-labelledby="skills-title">
-    <h2 id="skills-title">Habilidades</h2>
-    <div class="skills">
-      <div>
-        <h3>Dados & BI</h3>
-        <p>SQL (joins, CTEs, janelas), Python (pandas), Power BI (DAX, modelagem), Excel avançado.</p>
+  <!-- Conteúdo à direita (reaproveita seu site atual) -->
+  <main class="content">
+    <!-- Hero -->
+    <section class="hero section" id="home" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">Olá, eu sou o <span class="gradient">Paulo Iacono Vicentin</span> 👋</h1>
+        <p class="hero-sub">Analista de Dados / BI — SQL, Python e Power BI para transformar dados em decisões.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#projetos">Ver projetos</a>
+          <a class="btn alt" href="assets/cv-paulo.pdf" download>Baixar CV</a>
+        </div>
+        <div class="quick-stats">
+          <div><strong>200+</strong><span>projetos técnicos</span></div>
+          <div><strong>5+</strong><span>anos em engenharia</span></div>
+          <div><strong>SQL • Python • Power BI</strong><span>stack principal</span></div>
+        </div>
       </div>
-      <div>
-        <h3>Boas práticas</h3>
-        <p>Versionamento Git, documentação, testes exploratórios, governança de dados básica.</p>
-      </div>
-      <div>
-        <h3>Negócio</h3>
-        <p>Métricas, storytelling, priorização, foco em ROI, operação e finanças.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contato -->
-  <section class="section" id="contato" aria-labelledby="contato-title">
-    <h2 id="contato-title">Contato</h2>
-    <div class="contact">
-      <a class="btn" href="mailto:contato@paulovicentin.com">Email</a>
-      <a class="btn alt" href="https://www.linkedin.com/in/paulovicentin" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn alt" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </section>
-</main>
+    <!-- Projetos -->
+    <section class="section" id="projetos" aria-labelledby="proj-title">
+      <div class="section-head">
+        <h2 id="proj-title">Projetos</h2>
+        <div class="controls">
+          <input id="search" type="search" placeholder="Buscar por título, tag ou tecnologia…" aria-label="Buscar projetos" />
+          <div class="chips" id="tagChips" role="listbox" aria-label="Filtrar por tag"></div>
+          <select id="sortSelect" aria-label="Ordenar">
+            <option value="featured">Destaques primeiro</option>
+            <option value="recent">Mais recentes</option>
+            <option value="az">A → Z</option>
+          </select>
+        </div>
+      </div>
+      <div id="grid" class="grid" aria-live="polite"></div>
+      <div id="emptyState" class="empty" hidden>Nenhum projeto encontrado. Tente ajustar os filtros.</div>
+    </section>
 
-<footer class="site-footer">
-  <p>© <span id="year"></span> Paulo Vicentin • Feito com HTML/CSS/JS</p>
-</footer>
+    <!-- Sobre -->
+    <section class="section" id="sobre" aria-labelledby="sobre-title">
+      <h2 id="sobre-title">Sobre</h2>
+      <div class="about">
+        <p>Sou engenheiro civil em transição para Dados, com experiência em gestão, processos e operação.
+          Foco em <strong>SQL, Python e Power BI</strong> para responder perguntas de negócio e automatizar rotinas.</p>
+        <ul class="bullets">
+          <li>Experiência em <strong>modelagem de dados</strong>, ETL leve e visualização.</li>
+          <li>Projetos aplicados: churn, vendas, risco, CRM/ERP, IBGE/BCB.</li>
+          <li>Trabalho orientado a impacto: problema → hipótese → métrica → entrega.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Habilidades (texto complementar à direita, opcional) -->
+    <section class="section" id="habilidades" aria-labelledby="skills-title">
+      <h2 id="skills-title">Stack & práticas</h2>
+      <div class="skills">
+        <div>
+          <h3>Dados & BI</h3>
+          <p>SQL (joins, CTEs, janelas), Python (pandas), Power BI (DAX, modelagem), Excel avançado.</p>
+        </div>
+        <div>
+          <h3>Boas práticas</h3>
+          <p>Versionamento Git, documentação, testes exploratórios, governança básica.</p>
+        </div>
+        <div>
+          <h3>Negócio</h3>
+          <p>Métricas, storytelling, priorização, foco em ROI, operação e finanças.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section" id="contato" aria-labelledby="contato-title">
+      <h2 id="contato-title">Contato</h2>
+      <div class="contact">
+        <a class="btn" href="mailto:contato@paulovicentin.com">Email</a>
+        <a class="btn alt" href="https://www.linkedin.com/in/paulovicentin" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn alt" href="https://github.com/paulovicentin" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Paulo Vicentin • Feito com HTML/CSS/JS</p>
+    </footer>
+  </main>
+</div>
 
 <script type="application/ld+json">
 {
@@ -123,11 +167,10 @@
   "name": "Paulo Iacono Vicentin",
   "jobTitle": "Analista de Dados / BI",
   "address": {"addressLocality": "Maringá", "addressRegion": "PR", "addressCountry": "BR"},
-  "sameAs": [
-    "https://www.linkedin.com/in/paulovicentin"
-  ]
+  "sameAs": ["https://www.linkedin.com/in/paulovicentin"]
 }
 </script>
 <script src="script.js" defer></script>
 </body>
 </html>
+
