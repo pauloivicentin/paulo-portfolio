@@ -1,0 +1,80 @@
+[
+  {
+    "title": "Churn: Probabilidade de Cancelamento",
+    "description": "Modelo simples para identificar clientes com alto risco de churn e orientar ações de retenção.",
+    "tags": [
+      "churn",
+      "classificação",
+      "python",
+      "pandas"
+    ],
+    "tech": [
+      "Python",
+      "pandas",
+      "scikit-learn"
+    ],
+    "year": 2025,
+    "type": "Análise • ML leve",
+    "featured": true,
+    "badge": "CHURN",
+    "link": ""
+  },
+  {
+    "title": "Vendas: Dashboard Executivo",
+    "description": "Painel com DAX para mix de canais, ticket médio, cohort de clientes e forecast básico.",
+    "tags": [
+      "power bi",
+      "dax",
+      "vendas",
+      "dashboard"
+    ],
+    "tech": [
+      "Power BI",
+      "DAX"
+    ],
+    "year": 2025,
+    "type": "Dashboard",
+    "featured": true,
+    "badge": "BI",
+    "link": ""
+  },
+  {
+    "title": "Risco: VaR de Portfólio",
+    "description": "Cálculo de VaR paramétrico e histórico com visualizações do risco por ativo.",
+    "tags": [
+      "python",
+      "risco",
+      "finanças"
+    ],
+    "tech": [
+      "Python",
+      "pandas",
+      "matplotlib"
+    ],
+    "year": 2025,
+    "type": "Análise Quant",
+    "featured": false,
+    "badge": "VaR",
+    "link": ""
+  },
+  {
+    "title": "Dados Públicos: IBGE/BCB",
+    "description": "Pipeline leve para baixar séries do BCB e tabelas IBGE e consolidar em CSV.",
+    "tags": [
+      "etl",
+      "ibge",
+      "bcb",
+      "python"
+    ],
+    "tech": [
+      "Python",
+      "requests",
+      "pandas"
+    ],
+    "year": 2024,
+    "type": "ETL",
+    "featured": false,
+    "badge": "ETL",
+    "link": ""
+  }
+]
